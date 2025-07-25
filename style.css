@@ -21,6 +21,27 @@ h1 {
   margin-bottom: 20px;
 }
 
+.top-controls {
+  max-width: 1200px;
+  margin: 0 auto 15px;
+  text-align: center;
+}
+
+.top-controls button {
+  background: var(--rosa-medio);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1.1em;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.top-controls button:hover {
+  background: var(--rosa-oscuro);
+}
+
 .container {
   display: flex;
   gap: 20px;
@@ -47,6 +68,9 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  border-bottom: 2px solid var(--rosa-medio);
+  padding-bottom: 10px;
+  position: relative;
 }
 
 .semestre-title {
@@ -55,8 +79,27 @@ h1 {
   font-size: 1.3em;
   color: var(--rosa-medio);
   margin-bottom: 10px;
-  border-bottom: 1px solid var(--rosa-medio);
-  padding-bottom: 5px;
+}
+
+/* Botón añadir materia */
+.add-materia-btn {
+  background: var(--rosa-suave);
+  color: var(--rosa-medio);
+  border: 2px dashed var(--rosa-medio);
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  min-width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+  font-size: 1em;
+}
+
+.add-materia-btn:hover {
+  background: var(--rosa-medio);
+  color: white;
 }
 
 /* Materias */
@@ -197,4 +240,63 @@ h1 {
 #mensajeFelicitacion.show {
   opacity: 1;
   pointer-events: auto;
+}
+
+/* Modal estilos */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(136, 14, 79, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px 30px;
+  border-radius: 8px;
+  width: 320px;
+  max-width: 90%;
+  box-shadow: 0 0 15px var(--rosa-oscuro);
+  text-align: center;
+}
+
+.modal-content h3 {
+  margin-top: 0;
+  color: var(--rosa-medio);
+}
+
+.modal-content input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  margin-bottom: 15px;
+  border: 2px solid var(--rosa-medio);
+  border-radius: 6px;
+  color: var(--rosa-oscuro);
+}
+
+.modal-content button {
+  background: var(--rosa-medio);
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  font-size: 1em;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 0 5px;
+  transition: background-color 0.3s ease;
+}
+
+.modal-content button:hover {
+  background: var(--rosa-oscuro);
 }
