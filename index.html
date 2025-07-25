@@ -13,6 +13,10 @@
 <body>
   <h1>Malla Pensum Interactiva</h1>
 
+  <div class="top-controls">
+    <button id="addSemestreBtn"><i class="fa fa-plus"></i> Añadir Semestre</button>
+  </div>
+
   <div class="container">
     <div id="pensum"></div>
 
@@ -22,6 +26,16 @@
       <textarea id="notesTextarea" placeholder="Escribe tus notas aquí..."></textarea>
       <button id="saveNotesBtn"><i class="fa fa-floppy-disk"></i> Guardar notas</button>
     </aside>
+  </div>
+
+  <!-- Modal para añadir materia -->
+  <div id="modalAddMateria" class="modal hidden">
+    <div class="modal-content">
+      <h3>Añadir Materia</h3>
+      <input type="text" id="nombreMateriaInput" placeholder="Nombre de la materia" />
+      <button id="guardarMateriaBtn"><i class="fa fa-save"></i> Guardar Materia</button>
+      <button id="cerrarModalBtn"><i class="fa fa-times"></i> Cancelar</button>
+    </div>
   </div>
 
   <script src="script.js"></script>
