@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Malla Pensum Interactiva</title>
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Malla Pensum Interactiva</h1>
+
+  <div class="container">
+    <div id="pensum"></div>
+
+    <aside id="notesPanel">
+      <h2>Notas de la materia</h2>
+      <div id="notesContent">Haz clic en una materia para ver o agregar notas.</div>
+      <textarea id="notesTextarea" placeholder="Escribe tus notas aquí..."></textarea>
+      <button id="saveNotesBtn"><i class="fa fa-floppy-disk"></i> Guardar notas</button>
+    </aside>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
